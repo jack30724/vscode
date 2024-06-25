@@ -15,6 +15,8 @@
 const perf = require('./vs/base/common/performance');
 perf.mark('code/didStartMain');
 
+console.log("main.js STARTING...")
+
 const path = require('path');
 const fs = require('fs');
 const os = require('os');
@@ -107,7 +109,7 @@ protocol.registerSchemesAsPrivileged([
 
 // Global app listeners
 registerListeners();
-
+console.log("main.js After registerListeners")
 /**
  * Support user defined locale: load it early before app('ready')
  * to have more things running in parallel.
